@@ -276,6 +276,33 @@
 							<!--// .yui-u -->
 							<div class="yui-u">
 								<div class="job">
+									<h2>BÜK by Rizwaan Company</h2>
+									<h3>Software Innovations</h3>
+									<h4>November, 2016 -
+										<script>
+											var month_name = function (dt) {
+												mlist = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+													"October", "November", "December"
+												];
+												return mlist[dt.getMonth()];
+											};
+											var d = new Date();
+
+											var date = d.getUTCDate();
+											var month = d.getUTCMonth() + 1; // Since getUTCMonth() returns month from 0-11 not 1-12
+											var year = d.getUTCFullYear();
+
+											var dateStr = month_name(d) + ", " + year;
+											document.write(dateStr);
+										</script>
+									</h4>
+									<p>I noticed a problem with the class scheduling system at my school and stepped up
+										to fix it. I made an educational program that allows teachers and administrators
+										to create a list
+										of possible classes for each time of day, then allow the students to choose the
+										classes they prefer. It is being used at my school till this day. </p>
+								</div>
+								<div class="job">
 									<h2>Hunter Museum of Art</h2>
 									<h3>Digital Fabrication</h3>
 									<h4>August, 2017 - October, 2017</h4>
@@ -314,7 +341,7 @@
 										Shopbot and Laser Engraver for the Creative Discovery Museum. A custom PCB was
 										also designed to lower the cost if needed to reproduce. </p>
 								</div>
-								<div class="job">
+								<div class="job last">
 									<h2>Challenger Center</h2>
 									<h3>Digital Fabrication</h3>
 									<h4>January, 2019 - March, 2019</h4>
@@ -322,30 +349,7 @@
 										analyze the difference mass causes in the average velocity of the object at the
 										Challenger Center. </p>
 								</div>
-								<div class="job last">
-									<h2>BÜK by Rizwaan Company</h2>
-									<h3>Software Innovations</h3>
-									<h4>November, 2016 - <script>
-											var month_name = function (dt) {
-												mlist = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-													"October", "November", "December"
-												];
-												return mlist[dt.getMonth()];
-											};
-											var d = new Date();
 
-											var date = d.getUTCDate();
-											var month = d.getUTCMonth() + 1; // Since getUTCMonth() returns month from 0-11 not 1-12
-											var year = d.getUTCFullYear();
-
-											var dateStr = month_name(d) + ", " + year;
-											document.write(dateStr);
-										</script>
-									</h4>
-									<p>An educational program that allows teachers and administrators to create a list
-										of possible classes for each time of day, then allow the students to choose the
-										classes they prefer. </p>
-								</div>
 
 							</div>
 							<!--// .yui-u -->
@@ -386,12 +390,14 @@
 							<!--// .yui-u -->
 							<div class="yui-u">
 								<div class="job">
-									<h3>In 10th grade I participated in the Calculus A competition hosted by the Tennessee Mathematical Association of Two Year
-									Colleges and place 2nd in the whole state of Tennessee.
+									<h3>In 10th grade I participated in the Calculus A competition hosted by the
+										Tennessee Mathematical Association of Two Year
+										Colleges and place 2nd in the whole state of Tennessee.
 									</h3>
 								</div>
 								<div class="job">
-									<h3>I participated in a filmmaking 8-week camp editing and directing a few TV Shows for the local tv channel.
+									<h3>I participated in a filmmaking 8-week camp editing and directing a few TV Shows
+										for the local tv channel.
 									</h3>
 								</div>
 								<div class="job">
@@ -417,6 +423,38 @@
 								</div>
 							</div>
 						</div>
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Testing</h2>
+							</div>
+							<div class="yui-u">
+								<h2>ACT</h2>
+								<ul>
+									<li>
+										<h3>Highest Composite - 34 03/12/2019</h3>
+									</li>
+									<li>
+										<h3>Super Score - 35</h3>
+									</li>
+									<li>
+										<ul>
+											<li>
+												<h3>English - 34 03/12/2019</h3>
+											</li>
+											<li>
+												<h3>Math - 35 10/01/2019</h3>
+											</li>
+											<li>
+												<h3>Science - 36 04/13/2019</h3>
+											</li>
+											<li>
+												<h3>Reading - 35 03/12/2019</h3>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
 						<div class="yui-gf last">
 							<div class="yui-u first">
 								<h2>Education</h2>
@@ -424,6 +462,7 @@
 							<div class="yui-u">
 								<h2>STEM School Chattanooga - Chattanooga, Tennessee</h2>
 								<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>4.0 GPA</strong> </h3>
+								<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Rank 1</strong> </h3>
 							</div>
 							<div class="yui-u">
 								<h2><br></h2>
@@ -454,19 +493,19 @@
 </body>
 <script>
 	var doc = new jsPDF();
-		var specialElementHandlers = {
-			'#editor': function (element, renderer) {
-				return true;
-			}
-		};
+	var specialElementHandlers = {
+		'#editor': function (element, renderer) {
+			return true;
+		}
+	};
 
-		$('#cmd').click(function () {
-			doc.fromHTML($('#content').html(), 15, 15, {
-				'width': 170,
-				'elementHandlers': specialElementHandlers
-			});
-			doc.save('sample-file.pdf');
+	$('#cmd').click(function () {
+		doc.fromHTML($('#content').html(), 15, 15, {
+			'width': 170,
+			'elementHandlers': specialElementHandlers
 		});
-
+		doc.save('sample-file.pdf');
+	});
 </script>
+
 </html>
